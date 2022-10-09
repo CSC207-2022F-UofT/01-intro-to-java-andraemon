@@ -145,10 +145,11 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder();
         int len = to_split.length();
-        
+
+        ret.append(to_split.charAt(0));
+
         for (int i = 0; i < len; i++) {
-            char letter = to_split.charAt(i);
-            if (letter == ' ') ret.append(letter);
+            if (to_split.charAt(i) == ' ') ret.append(to_split.charAt(i + 1));
         }
 
         return ret.toString();
